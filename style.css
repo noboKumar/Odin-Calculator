@@ -35,8 +35,8 @@ body{
     padding: 25px;
 }
 button{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50px;
     border: none;
     background-color: hsl(206, 23%, 95%);
@@ -51,4 +51,15 @@ button:hover{
 }
 button:active{
     background-color: hsl(196, 17%, 100%);
+}
+.operator-btn{
+    color: hsl(37, 100%, 44%);
+}
+
+.clear-btn{
+    color: #cc1010;
+}
+#equal-btn{
+    grid-column: 3 / 5;
+    width: 200px;
 }
