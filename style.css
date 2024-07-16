@@ -1,14 +1,16 @@
-*{
+* {
     background-color: rgba(126, 101, 101, 0.216);
 }
-body{
+
+body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-#calculator{
+
+#calculator {
     font-family: Arial, Helvetica, sans-serif;
     background-color: hsl(0, 0%, 85%);
     border-color: 59px black;
@@ -18,7 +20,8 @@ body{
     max-width: 450px;
     overflow: hidden;
 }
-#display{
+
+#display {
     width: 93%;
     background-color: hsl(0, 0%, 89%);
     padding: 15px;
@@ -27,13 +30,15 @@ body{
     color: rgb(0, 0, 0);
     border: none;
 }
-#keys{
+
+#keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     padding: 25px;
 }
-button{
+
+button {
     height: 80px;
     width: 80px;
     border-radius: 50px;
@@ -43,32 +48,35 @@ button{
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 2px 5px 6px hsl(0, 0%, 40%) ;
+    box-shadow: 2px 5px 6px hsl(0, 0%, 40%);
     transition: all 0.1s ease;
 }
-button:hover{
+
+button:hover {
     background-color: hsl(195, 8%, 89%);
 }
 
 button:active,
-button.active{
+button.active {
     background-color: hsl(196, 17%, 100%);
     transform: translateY(4px);;
     box-shadow: inset 2px 2px 6px hsl(0, 0%, 40%);
 }
-.operator-btn{
+
+.operator-btn {
     color: hsl(37, 100%, 44%);
 }
 
-.clear-btn{
+.clear-btn {
     color: #cc1010;
 }
-#equal-btn{
+
+#equal-btn {
     grid-column: 3 / 5;
     width: 200px;
 }
 
-footer,p {
+footer, p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: transparent;
@@ -87,7 +95,37 @@ footer a:hover {
     text-decoration: underline;
 }
 
-a{
+a {
     background-color: transparent;
     font-weight: bolder;
+}
+
+/* Add responsive design for tablet devices */
+@media only screen and (max-width: 768px) {
+    #calculator {
+        max-width: 300px;
+    }
+    #display {
+        font-size: 2.5rem;
+    }
+    button {
+        height: 50px;
+        width: 50px;
+        font-size: 1.5rem;
+    }
+    #equal-btn {
+        width: 120px;
+    }
+}
+/* Add responsive design for mobile devices */
+@media only screen and (max-width: 320px) {
+    body {
+        background-size: 320px 558px; /* adjust the background size to fit the mobile screen */
+        background-position: center top; /* adjust the background position to top center */
+    }
+
+    footer, p {
+        font-size: 0.8rem; /* reduce font size to 0.8rem */
+        padding: 5px; /* reduce padding to 5px */
+    }
 }
