@@ -11,7 +11,7 @@ function appendToDisplay(value){
 
 //clear display
 function clearDisplay(){
-    display.value = "0"
+    display.value = "0";
 }
 
 //delete single input
