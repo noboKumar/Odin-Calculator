@@ -5,7 +5,11 @@ const display = document.getElementById("display");
         const key = event.key;
         const button = document.querySelector(`button[data-key="${key}"]`);
         if (button){
+            button.classList.add('active');
             button.click();
+            setTimeout(()=> {
+                button.classList.remove('active');
+            }, 100);
         }
     });
 
