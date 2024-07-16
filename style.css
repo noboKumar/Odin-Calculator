@@ -1,5 +1,5 @@
 *{
-    background-color: rgba(165, 165, 165, 0.216);
+    background-color: rgba(126, 101, 101, 0.216);
 }
 body{
     margin: 0;
@@ -19,12 +19,11 @@ body{
     overflow: hidden;
 }
 #display{
-    width: 100%;
+    width: 93%;
     background-color: hsl(0, 0%, 89%);
-    padding: 10px;
-    font-size: 5rem;
-    border-radius: 5px;
-    text-align: left;
+    padding: 15px;
+    font-size: 4rem;
+    text-align: right;
     color: rgb(0, 0, 0);
     border: none;
 }

@@ -1,5 +1,14 @@
 const display = document.getElementById("display");
 
+//keyboard support
+    document.addEventListener('keydown', function(event){
+        const key = event.key;
+        const button = document.querySelector(`button[data-key="${key}"]`);
+        if (button){
+            button.click();
+        }
+    });
+
 //display
 function appendToDisplay(value){
     if (display.value === '0' && value !== '.'){
@@ -27,8 +36,9 @@ function del(){
 function calculate (){
     try{
         const result = new Function ('return ' + display.value)();
-        display.value = result.toString();
+        display.value = Number (result.toFixed(9)).toString();
     } catch(error){
         display.value = "Error";
     }
 }
+
