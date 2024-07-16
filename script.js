@@ -24,52 +24,11 @@ function del(){
 }
 
 //calculation function 
-function calculate(){
-    try {
-        if (display.value.includes("+")){
-            add();
-        } else if (display.value.includes("-")){
-            subtract();
-        } else if (display.value.includes("*")){
-            multiply();
-        } else if (display.value.includes("/")){
-            divide();
-        } else if(display.value.includes("%")){
-            modules()
-        } else {
-            throw new Error ("Invalid expression");
-        }
-    } catch (error){
+function calculate (){
+    try{
+        const result = new Function ('return ' + display.value)();
+        display.value = result.toString();
+    } catch(error){
         display.value = "Error";
     }
-}
-
-//operator function
-function add(){
-    const [num1, num2 ] = display.value.split("+").map(Number);
-    display.value = (num1 + num2).toString();
-}
-
-function subtract(){
-    const [num1, num2 ] = display.value.split("-").map(Number);
-    display.value = (num1 - num2).toString();
-}
-
-function multiply(){
-    const [num1, num2 ] = display.value.split("*").map(Number);
-    display.value = (num1 * num2).toString();
-}
-
-function divide(){
-    const [num1, num2 ] = display.value.split("/").map(Number);
-    if (num2 === 0){
-        throw new Error ("Math Error");
-    } else {
-        display.value = (num1 / num2).toString();
-    }
-}
-
-function modules(){
-    const [num1, num2 ] = display.value.split("%").map(Number);
-    display.value = (num1 % num2).toString();
 }
