@@ -20,21 +20,23 @@ function appendToDisplay(value){
     } else{
         display.value += value;
     }
-}
+};
 
 //clear display
 function clearDisplay(){
     display.value = "0";
-}
+};
 
 //delete single input
 function del(){
-    if (display.value.length > 1){
+    if (display.value === "Error"){
+        display.value = "0";
+    } else if (display.value.length > 1) {
         display.value = display.value.slice(0, -1);
-    } else {
-        display.value ="0";
+    } else{
+        display.value ="0"
     }
-}
+};
 
 //calculation function 
 function calculate (){
@@ -44,5 +46,4 @@ function calculate (){
     } catch(error){
         display.value = "Error";
     }
-}
-
+};
