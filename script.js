@@ -41,7 +41,8 @@ function del(){
 //calculation function 
 function calculate (){
     try{
-        const result = new Function ('return ' + display.value)();
+        let filterDisplayValue = display.value.replace(/x/g,'*').replace(/÷/g, '/');
+        const result = new Function ('return ' + filterDisplayValue)();
         display.value = Number (result.toFixed(9)).toString();
     } catch(error){
         display.value = "Error";
