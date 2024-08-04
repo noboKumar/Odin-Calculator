@@ -40,8 +40,9 @@ function del(){
 
 //calculation function 
 function calculate (){
-    try{
+    try {
         let filterDisplayValue = display.value.replace(/x/g,'*').replace(/÷/g, '/');
+        filterDisplayValue = filterDisplayValue.replace(/(\d+(\.\d+)?)%/g, '($1*0.01)'); //to handle % calculation  
         const result = new Function ('return ' + filterDisplayValue)();
         display.value = Number (result.toFixed(9)).toString();
     } catch(error){
