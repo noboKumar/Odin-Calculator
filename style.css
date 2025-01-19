@@ -22,13 +22,16 @@ body {
 }
 
 #display {
-    width: 95%;
+    width: 93%;
     background-color: hsl(0, 0%, 89%);
     padding: 15px;
     font-size: 4rem;
     text-align: right;
     color: rgb(0, 0, 0);
     border: none;
+}
+#display:focus{
+    outline: none;
 }
 
 #keys {
@@ -81,10 +84,9 @@ footer, p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: transparent;
-    padding: 10px;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 300px;
 }
 
 footer a {
@@ -116,75 +118,5 @@ a {
     }
     #equal-btn {
         width: 120px;
-    }
-}
-/* Add responsive design for mobile devices */
-@media only screen and (max-width: 320px) {
-    body {
-        background-size: 320px 558px; /* adjust the background size to fit the mobile screen */
-        background-position: center top; /* adjust the background position to top center */
-    }
-
-    footer, p {
-        font-size: 0.8rem; /* reduce font size to 0.8rem */
-        padding: 5px; /* reduce padding to 5px */
-    }
-}
-
-
-/* Add responsive design for mobile devices */
-@media only screen and (max-width: 320px) {
-    body {
-        font-size: 0.9rem; /* reduce font size to 0.9rem */
-    }
-    footer {
-        font-size: 0.8rem; /* reduce font size to 0.8rem */
-        padding: 5px; /* reduce padding to 5px */
-    }
-}
-
-/* Add responsive design for 266x501 phone screen */
-@media only screen and (max-width: 266px) {
-    body {
-        font-size: 0.7rem; /* reduce font size to 0.7rem */
-    }
-    footer {
-        font-size: 0.6rem; /* reduce font size to 0.6rem */
-        padding: 3px; /* reduce padding to 3px */
-    }
-}
-
-
-/* Mobile phone styles for 266x500 screen size */
-@media only screen and (max-width: 266px) and (max-height: 500px) {
-    /* Make the background image fit the screen */
-    body {
-        background-size: 100% 100vh;
-        background-position: center;
-    }
-
-    /* Adjust font sizes and padding for better readability */
-    body {
-        font-size: 0.8rem;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        padding: 10px;
-    }
-
-    /* Adjust margins and padding for better layout */
-    .container {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    /* Make images fit the screen width */
-    img {
-        max-width: 100%;
-        height: auto;
     }
 }
